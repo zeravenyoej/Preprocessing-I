@@ -85,6 +85,10 @@ html, body {
 
 /************************** REGULAR CODE *******************/
 
+h2 {
+	font-size: 1.5rem;
+}
+
 header {
 	.makeItRight();
 
@@ -125,9 +129,7 @@ header {
 				h2 {
 					font-size: 2rem;
 				}
-
 		}
-
 
 		.belowTheLine {
 			padding-top: 2%;
@@ -139,6 +141,48 @@ header {
 					margin-top: 1%;
 				}
 		}
+}
 
+.middleContent {
+	display: flex;
+	justify-content: space-between;
+	padding: 3% 0;
 
+		.midLeft {
+			width: 49%;
+		}
+
+		.midRight {
+			width: 49%;
+
+			.listContainer {
+				border: 1px dashed @border-color;
+				
+				p {
+					border-bottom: 1px dashed @border-color;
+					padding: 1.5%;
+				}
+			}
+		}
+}
+
+.bottomContent {
+	h2 {
+		padding-bottom: 1.5%;
+		border-bottom: 1px solid @border-color;
+	}
+	.tableContainer{
+		padding: 2% 0;
+	}
+	.coloredRow {
+		background-color: @lighter-color;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	color: white;
+	background: @darker-color;
+	padding: 2% 0;
 }
