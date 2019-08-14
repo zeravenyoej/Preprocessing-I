@@ -21,7 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	// font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -56,4 +56,89 @@ table {
 html, body {
     height: 100%;
 }
+/********************I STARTED HERE********************/
 
+.container {
+	margin: 0 2%;
+}
+
+/******************VARIABLES*****************************/
+
+@lighter-color: cornsilk;
+@darker-color: darkslategrey;
+@border-color: grey;
+
+
+/****************** MIXINS *****************************/
+
+.makeItRight() {
+	display: flex;
+	justify-content: flex-end;
+	padding: 2%;
+}
+
+.makeItLeft(){
+	display: flex;
+	justify-content: flex-start;
+	padding: 2%;
+}
+
+/************************** REGULAR CODE *******************/
+
+header {
+	.makeItRight();
+
+	nav {
+		width: 25%;
+		display: flex;
+		justify-content: flex-end;
+		justify-content: space-between;
+	
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+.topContent {
+	.makeItLeft ();
+	flex-direction: column;
+	background: @lighter-color;
+	padding: 3.5% 2%;
+
+		.boxWithImage {
+			width: 30%;
+
+				img {
+					width: 100%;
+				}
+		}
+
+		.aboveTheLine {
+			border-bottom: 1px solid @border-color;
+			padding-bottom: 3%;
+				h1 {
+					font-size: 4rem;
+				}
+
+				h2 {
+					font-size: 2rem;
+				}
+
+		}
+
+
+		.belowTheLine {
+			padding-top: 2%;
+
+				button {
+					background: @darker-color;
+					color: white;
+					padding: 1%;
+					margin-top: 1%;
+				}
+		}
+
+
+}

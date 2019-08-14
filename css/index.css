@@ -87,7 +87,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -133,4 +132,59 @@ table {
 html,
 body {
   height: 100%;
+}
+/********************I STARTED HERE********************/
+.container {
+  margin: 0 2%;
+}
+/******************VARIABLES*****************************/
+/****************** MIXINS *****************************/
+/************************** REGULAR CODE *******************/
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2%;
+}
+header nav {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+.topContent {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2%;
+  flex-direction: column;
+  background: cornsilk;
+  padding: 3.5% 2%;
+}
+.topContent .boxWithImage {
+  width: 30%;
+}
+.topContent .boxWithImage img {
+  width: 100%;
+}
+.topContent .aboveTheLine {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3%;
+}
+.topContent .aboveTheLine h1 {
+  font-size: 4rem;
+}
+.topContent .aboveTheLine h2 {
+  font-size: 2rem;
+}
+.topContent .belowTheLine {
+  padding-top: 2%;
+}
+.topContent .belowTheLine button {
+  background: darkslategrey;
+  color: white;
+  padding: 1%;
+  margin-top: 1%;
 }
