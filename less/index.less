@@ -56,17 +56,13 @@ table {
 html, body {
     height: 100%;
 }
-/********************I STARTED HERE********************/
-
-.container {
-	margin: 0 2%;
-}
 
 /******************VARIABLES*****************************/
 
 @lighter-color: cornsilk;
 @darker-color: darkslategrey;
 @border-color: grey;
+@font: 'Poppins', sans-serif;
 
 
 /****************** MIXINS *****************************/
@@ -77,112 +73,181 @@ html, body {
 	padding: 2%;
 }
 
-.makeItLeft(){
+.makeItLeft(@padding){
 	display: flex;
 	justify-content: flex-start;
-	padding: 2%;
+	padding: @padding;
 }
 
 /************************** REGULAR CODE *******************/
 
 h2 {
 	font-size: 1.5rem;
-}
 
-header {
-	.makeItRight();
-
-	nav {
-		width: 25%;
-		display: flex;
-		justify-content: flex-end;
-		justify-content: space-between;
-	
-		a {
-			text-decoration: none;
-			color: black;
-		}
+	@media screen and (max-width: 500px) {
+		font-size: 1rem;
 	}
 }
 
-.topContent {
-	.makeItLeft ();
-	flex-direction: column;
-	background: @lighter-color;
-	padding: 3.5% 2%;
-
-		.boxWithImage {
-			width: 30%;
-
-				img {
-					width: 100%;
-				}
-		}
-
-		.aboveTheLine {
-			border-bottom: 1px solid @border-color;
-			padding-bottom: 3%;
-				h1 {
-					font-size: 4rem;
-				}
-
-				h2 {
-					font-size: 2rem;
-				}
-		}
-
-		.belowTheLine {
-			padding-top: 2%;
-
-				button {
-					background: @darker-color;
-					color: white;
-					padding: 1%;
-					margin-top: 1%;
-				}
-		}
+p, a, th, tr, h3 {
+	@media screen and (max-width: 500px) {
+		font-size: .9rem;
+	}
 }
 
-.middleContent {
-	display: flex;
-	justify-content: space-between;
-	padding: 3% 0;
+p, h2, h1, h3, a, th, tr {
+	font-family: @font;
+}
 
-		.midLeft {
-			width: 49%;
+.container {
+	margin: 0 2%;
+
+		header {
+			.makeItRight();
+
+			@media screen and (max-width: 500px) {
+				display:flex;
+				justify-content: center;
+			}
+
+			nav {
+				width: 40%;
+				display: flex;
+				justify-content: flex-end;
+				justify-content: space-between;
+
+				@media screen and (max-width: 500px) {
+					width: 80%;
+				}
+			
+				a {
+					text-decoration: none;
+					color: black;
+				}
+
+			}
 		}
 
-		.midRight {
-			width: 49%;
+		.topContent {
+			.makeItLeft (3.5% 2%);
+			flex-direction: column;
+			background: @lighter-color;
 
-			.listContainer {
-				border: 1px dashed @border-color;
+				.boxWithImage {
+					width: 30%;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.aboveTheLine {
+					border-bottom: 1px solid @border-color;
+					padding-bottom: 3%;
 				
-				p {
-					border-bottom: 1px dashed @border-color;
-					padding: 1.5%;
+						h1 {
+							font-size: 4rem;
+
+							@media screen and (max-width: 500px) {
+								font-size: 2.5rem;
+							}
+						}
+
+						h2 {
+							font-size: 2rem;
+
+							@media screen and (max-width: 500px) {
+								font-size: 1.2rem;
+							}
+						}
+				}
+
+				.belowTheLine {
+					padding-top: 2%;
+
+						button {
+							background: @darker-color;
+							color: white;
+							padding: 1%;
+							margin-top: 1%;
+						}
+				}
+		}
+
+		.middleContent {
+			display: flex;
+			justify-content: space-between;
+			padding: 3% 0;
+
+			@media screen and (max-width: 500px) {
+				display: flex;
+				flex-direction: column;
+			}
+
+				.midLeft {
+					width: 49%;
+
+					@media screen and (max-width: 500px) {
+						width: 100%;
+						padding-bottom: 3%;
+					}
+				}
+
+				.midRight {
+					width: 49%;
+
+					@media screen and (max-width: 500px) {
+						width: 100%;
+					}
+
+					.listContainer {
+						border: 1px dashed @border-color;
+						
+						p {
+							border-bottom: 1px dashed @border-color;
+							padding: 1.5%;
+						}
+					}
+				}
+		}
+
+		.bottomContent {
+			h2 {
+				padding-bottom: 1.5%;
+				border-bottom: 1px solid @border-color;
+			}
+			.tableContainer{
+				padding: 2% 0;
+				width: 45%;
+
+				@media screen and (max-width: 500px) {
+					width: 80%;
+				}
+			}
+
+			table { 
+				margin-left: auto;
+				margin-right: auto;
+
+				th, td {
+					padding: 3%;
+				}
+
+				th {
+					text-align: left;
+				}
+
+				.coloredRow {
+					background-color: @lighter-color;
 				}
 			}
 		}
-}
 
-.bottomContent {
-	h2 {
-		padding-bottom: 1.5%;
-		border-bottom: 1px solid @border-color;
-	}
-	.tableContainer{
-		padding: 2% 0;
-	}
-	.coloredRow {
-		background-color: @lighter-color;
-	}
-}
-
-footer {
-	display: flex;
-	justify-content: center;
-	color: white;
-	background: @darker-color;
-	padding: 2% 0;
+		footer {
+			display: flex;
+			justify-content: center;
+			color: white;
+			background: @darker-color;
+			padding: 2% 0;
+		}
 }

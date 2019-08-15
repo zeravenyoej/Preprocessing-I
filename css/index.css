@@ -133,93 +133,169 @@ html,
 body {
   height: 100%;
 }
-/********************I STARTED HERE********************/
-.container {
-  margin: 0 2%;
-}
 /******************VARIABLES*****************************/
 /****************** MIXINS *****************************/
 /************************** REGULAR CODE *******************/
 h2 {
   font-size: 1.5rem;
 }
-header {
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  p,
+  a,
+  th,
+  tr,
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+p,
+h2,
+h1,
+h3,
+a,
+th,
+tr {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  margin: 0 2%;
+}
+.container header {
   display: flex;
   justify-content: flex-end;
   padding: 2%;
 }
-header nav {
-  width: 25%;
+@media screen and (max-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: center;
+  }
+}
+.container header nav {
+  width: 40%;
   display: flex;
   justify-content: flex-end;
   justify-content: space-between;
 }
-header nav a {
+@media screen and (max-width: 500px) {
+  .container header nav {
+    width: 80%;
+  }
+}
+.container header nav a {
   text-decoration: none;
   color: black;
 }
-.topContent {
+.container .topContent {
   display: flex;
   justify-content: flex-start;
-  padding: 2%;
+  padding: 3.5% 2%;
   flex-direction: column;
   background: cornsilk;
-  padding: 3.5% 2%;
 }
-.topContent .boxWithImage {
+.container .topContent .boxWithImage {
   width: 30%;
 }
-.topContent .boxWithImage img {
+.container .topContent .boxWithImage img {
   width: 100%;
 }
-.topContent .aboveTheLine {
+.container .topContent .aboveTheLine {
   border-bottom: 1px solid grey;
   padding-bottom: 3%;
 }
-.topContent .aboveTheLine h1 {
+.container .topContent .aboveTheLine h1 {
   font-size: 4rem;
 }
-.topContent .aboveTheLine h2 {
+@media screen and (max-width: 500px) {
+  .container .topContent .aboveTheLine h1 {
+    font-size: 2.5rem;
+  }
+}
+.container .topContent .aboveTheLine h2 {
   font-size: 2rem;
 }
-.topContent .belowTheLine {
+@media screen and (max-width: 500px) {
+  .container .topContent .aboveTheLine h2 {
+    font-size: 1.2rem;
+  }
+}
+.container .topContent .belowTheLine {
   padding-top: 2%;
 }
-.topContent .belowTheLine button {
+.container .topContent .belowTheLine button {
   background: darkslategrey;
   color: white;
   padding: 1%;
   margin-top: 1%;
 }
-.middleContent {
+.container .middleContent {
   display: flex;
   justify-content: space-between;
   padding: 3% 0;
 }
-.middleContent .midLeft {
+@media screen and (max-width: 500px) {
+  .container .middleContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .middleContent .midLeft {
   width: 49%;
 }
-.middleContent .midRight {
+@media screen and (max-width: 500px) {
+  .container .middleContent .midLeft {
+    width: 100%;
+    padding-bottom: 3%;
+  }
+}
+.container .middleContent .midRight {
   width: 49%;
 }
-.middleContent .midRight .listContainer {
+@media screen and (max-width: 500px) {
+  .container .middleContent .midRight {
+    width: 100%;
+  }
+}
+.container .middleContent .midRight .listContainer {
   border: 1px dashed grey;
 }
-.middleContent .midRight .listContainer p {
+.container .middleContent .midRight .listContainer p {
   border-bottom: 1px dashed grey;
   padding: 1.5%;
 }
-.bottomContent h2 {
+.container .bottomContent h2 {
   padding-bottom: 1.5%;
   border-bottom: 1px solid grey;
 }
-.bottomContent .tableContainer {
+.container .bottomContent .tableContainer {
   padding: 2% 0;
+  width: 45%;
 }
-.bottomContent .coloredRow {
+@media screen and (max-width: 500px) {
+  .container .bottomContent .tableContainer {
+    width: 80%;
+  }
+}
+.container .bottomContent table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .bottomContent table th,
+.container .bottomContent table td {
+  padding: 3%;
+}
+.container .bottomContent table th {
+  text-align: left;
+}
+.container .bottomContent table .coloredRow {
   background-color: cornsilk;
 }
-footer {
+.container footer {
   display: flex;
   justify-content: center;
   color: white;
