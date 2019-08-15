@@ -209,23 +209,31 @@ tr {
   padding-bottom: 3%;
 }
 .container .topContent .aboveTheLine h1 {
-  font-size: 4rem;
+  font-size: 10vh;
 }
 @media screen and (max-width: 500px) {
   .container .topContent .aboveTheLine h1 {
-    font-size: 2.5rem;
+    font-size: 7vh;
   }
 }
 .container .topContent .aboveTheLine h2 {
-  font-size: 2rem;
+  font-size: 6vh;
 }
 @media screen and (max-width: 500px) {
   .container .topContent .aboveTheLine h2 {
-    font-size: 1.2rem;
+    font-size: 3vh;
   }
 }
 .container .topContent .belowTheLine {
   padding-top: 2%;
+}
+.container .topContent .belowTheLine p {
+  font-size: 3vh;
+}
+@media screen and (max-width: 500px) {
+  .container .topContent .belowTheLine p {
+    font-size: 2vh;
+  }
 }
 .container .topContent .belowTheLine button {
   background: darkslategrey;
