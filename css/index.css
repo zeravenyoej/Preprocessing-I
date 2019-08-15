@@ -1,1 +1,312 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/******************VARIABLES*****************************/
+/****************** MIXINS *****************************/
+/************************** REGULAR CODE *******************/
+h2 {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  p,
+  a,
+  th,
+  tr,
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+p,
+h2,
+h1,
+h3,
+a,
+th,
+tr {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  margin: 0 2%;
+}
+.container header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2%;
+}
+@media screen and (max-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: center;
+  }
+}
+.container header nav {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .container header nav {
+    width: 80%;
+  }
+}
+.container header nav a {
+  text-decoration: none;
+  color: black;
+}
+.container .topContent {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3.5% 2%;
+  flex-direction: column;
+  background: cornsilk;
+}
+.container .topContent .boxWithImage {
+  width: 30%;
+}
+.container .topContent .boxWithImage img {
+  width: 100%;
+}
+.container .topContent .aboveTheLine {
+  border-bottom: 1px solid grey;
+  padding-bottom: 3%;
+}
+.container .topContent .aboveTheLine h1 {
+  font-size: 10vh;
+}
+@media screen and (max-width: 500px) {
+  .container .topContent .aboveTheLine h1 {
+    font-size: 7vh;
+  }
+}
+.container .topContent .aboveTheLine h2 {
+  font-size: 6vh;
+}
+@media screen and (max-width: 500px) {
+  .container .topContent .aboveTheLine h2 {
+    font-size: 3vh;
+  }
+}
+.container .topContent .belowTheLine {
+  padding-top: 2%;
+}
+.container .topContent .belowTheLine p {
+  font-size: 3vh;
+}
+@media screen and (max-width: 500px) {
+  .container .topContent .belowTheLine p {
+    font-size: 2vh;
+  }
+}
+.container .topContent .belowTheLine button {
+  background: darkslategrey;
+  color: white;
+  padding: 1%;
+  margin-top: 1%;
+}
+.container .middleContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+@media screen and (max-width: 500px) {
+  .container .middleContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .middleContent .midLeft {
+  width: 49%;
+}
+@media screen and (max-width: 500px) {
+  .container .middleContent .midLeft {
+    width: 100%;
+    padding-bottom: 3%;
+  }
+}
+.container .middleContent .midRight {
+  width: 49%;
+}
+@media screen and (max-width: 500px) {
+  .container .middleContent .midRight {
+    width: 100%;
+  }
+}
+.container .middleContent .midRight .listContainer {
+  border: 1px dashed grey;
+}
+.container .middleContent .midRight .listContainer p {
+  border-bottom: 1px dashed grey;
+  padding: 1.5%;
+}
+.container .bottomContent h2 {
+  padding-bottom: 1.5%;
+  border-bottom: 1px solid grey;
+}
+.container .bottomContent .tableContainer {
+  padding: 2% 0;
+  width: 45%;
+}
+@media screen and (max-width: 500px) {
+  .container .bottomContent .tableContainer {
+    width: 80%;
+  }
+}
+.container .bottomContent table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .bottomContent table th,
+.container .bottomContent table td {
+  padding: 3%;
+}
+.container .bottomContent table th {
+  text-align: left;
+}
+.container .bottomContent table .coloredRow {
+  background-color: cornsilk;
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: darkslategrey;
+  padding: 2% 0;
+}
